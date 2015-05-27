@@ -1,0 +1,44 @@
+﻿
+<div class="row clearfix">
+    <div class="col-md-12 column">
+        <button type="button" class="btn btn-success" ui-sref="Projects.Create"><span class="glyphicon glyphicon-plus">Add</button>
+    </div>
+</div>
+<div class="row clearfix">
+    <div class="col-md-12 column">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        #
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        
+                    </th>
+                    <th>
+                        
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in aaObj">
+                    <td>
+                        {{item.id}}
+                    </td>
+                    <td>
+                        {{item.Name}}
+                    </td>
+                    <td>
+                        <button class="btn btn-primary" ng-click="vm.showProjectDetail(item.id)"><span class="glyphicon glyphicon-list-alt">Detail</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" ng-click="vm.deleteProject(item.id)"><span class="glyphicon glyphicon-trash">AddDelete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
